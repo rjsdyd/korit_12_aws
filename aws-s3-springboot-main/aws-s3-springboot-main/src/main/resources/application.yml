@@ -3,8 +3,8 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://:3306/instagram # RDS 인스턴스 엔드포인트
-    username: admin # (RDS 인스턴스 생성 시 셋팅한) RDS 마스터 사용자 이름
-    password: 12345678 # (RDS 인스턴스 생성 시 셋팅한) RDS 마스터 비밀번호
+    username: # (RDS 인스턴스 생성 시 셋팅한) RDS 마스터 사용자 이름
+    password: # (RDS 인스턴스 생성 시 셋팅한) RDS 마스터 비밀번호
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
