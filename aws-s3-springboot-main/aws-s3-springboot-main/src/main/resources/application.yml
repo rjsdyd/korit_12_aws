@@ -1,0 +1,21 @@
+server:
+  port: 80
+spring:
+  datasource:
+    url: jdbc:mysql://instagram-db.czcmyi2ksfxu.ap-northeast-2.rds.amazonaws.com:3306/instagram # RDS 인스턴스 엔드포인트
+    username: admin # (RDS 인스턴스 생성 시 셋팅한) RDS 마스터 사용자 이름
+    password: 12345678 # (RDS 인스턴스 생성 시 셋팅한) RDS 마스터 비밀번호
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  cloud:
+    aws:
+      credentials:
+        access-key: AKIAXOBEFLZI5VWIVI47 # IAM 통해서 발급받은 액세스 키
+        secret-key: MDo5S0iArp1QoPsWjwvNzqcy6qiUlZZlDcnKwpe9 # IAM 통해서 발급받은 비밀 액세스 키
+      s3:
+        bucket: rjsdyd-instagram-uploaded-files  # 생성한 버킷명
+      region:
+        static: ap-northeast-2
